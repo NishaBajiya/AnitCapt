@@ -1,13 +1,9 @@
-# AntiCAPt: A method for predicting, designing and scanning anticancer aptamers
-
-Developed in the style of Raghava-lab standalone tools
-(https://github.com/raghavagps -- see e.g. AntiCP2, IL6Pred).
-Web server: https://webs.iiitd.edu.in/raghava/anticapt/index.php
+# AntiCapt: A LLM method for predicting, designing and scanning anticancer aptamers
 
 ## Introduction
 
-AntiCAPt is developed for predicting, designing, and scanning anticancer
-(AC) DNA aptamers. Two models are incorporated -- both use the SAME
+AntiCapt is developed for predicting, designing, and scanning anticancer
+(AC) ssDNA aptamers. Two models are incorporated -- both use the SAME
 feature pipeline (fine-tuned HyenaDNA embeddings), with different
 classifiers trained on different datasets:
 
@@ -17,15 +13,15 @@ classifiers trained on different datasets:
 
 **Modules/Jobs:** This program implements three modules (job types):
 
-1. **Predict** -- predicting anticancer-aptamer potential of input DNA sequences.
+1. **Predict** -- predicting anticancer-aptamer potential of input ssDNA sequences.
 2. **Design** -- generating all single-point mutants (every position x
    every alternative base) of input sequences and computing the
    anticancer-aptamer potential (score) of each mutant. Useful for
    identifying which single substitutions most improve predicted potency.
 3. **Scan** -- creating all overlapping windows of a given length from
-   longer input sequences and computing the anticancer-aptamer potential
-   of each window. Useful for localizing the active region of a longer
-   sequence.
+   longer input nucleotide sequences and computing the anticancer-aptamer potential
+   of each window. Useful for identifying the active region of a longer
+   nucleotide sequence.
 
 ## Installation
 
@@ -57,7 +53,7 @@ the layout requirements. If both datasets should share one fine-tuned
 embedding model, copy/symlink it into both `finetuned_hyenadna/` folders.
 
 `MAX_LENGTH` in `utils/hyenadna_features.py` is set to **128**, matching
-the fine-tuning pipeline this was verified against -- change it there if
+the fine-tuning pipeline, this was verified against -- change it there if
 yours differs.
 
 ## Minimum Usage
@@ -116,7 +112,7 @@ Two formats accepted:
    auto-generated as `Seq_1`, `Seq_2`, ...
 
 Non-ACGT characters trigger a warning but are not stripped automatically
-(check your sequences if you see this warning -- it usually means stray
+(Check your sequences if you see this warning -- it usually means stray
 whitespace, ambiguity codes, or an accidental protein/RNA sequence).
 
 ## Output File
@@ -157,20 +153,16 @@ example/
 
 ## Citation
 
-Manuscript in preparation. Please check `CITATION.cff` in this repository
-or the web server (https://webs.iiitd.edu.in/raghava/anticapt/) for the
-current citation notice, and update both once the manuscript is published.
+Manuscript in preparation.
+## Web Server
 
-## License
-
-This project is licensed under the GNU General Public License v3.0 --
-see the `LICENSE` file for details.
+It is available as a user-friendly, open-access web server at https://webs.iiitd.edu.in/raghava/anticapt/
 
 ## Address for Contact
 
-In case of any query please contact:
+In case of any query, please contact:
 ```
-Prof. G. P. S. Raghava, Head Department of Computational Biology,
+Prof. G. P. S. Raghava, Professor, Department of Computational Biology,
 Indraprastha Institute of Information Technology (IIIT),
 Okhla Phase III, New Delhi 110020; Phone: +91-11-26907444;
 Email: raghava@iiitd.ac.in  Web: http://webs.iiitd.edu.in/raghava/
