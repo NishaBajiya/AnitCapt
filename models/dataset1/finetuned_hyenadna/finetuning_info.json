@@ -1,0 +1,11 @@
+{
+    "original_model": "LongSafari/hyenadna-tiny-1k-seqlen-hf",
+    "embedding_type": "mean_pooled_hidden_states",
+    "embedding_dimension": 128,
+    "max_length": 128,
+    "fine_tuning_epochs": 5,
+    "learning_rate": 2e-05,
+    "weight_decay": 0.01,
+    "dropout": 0.1,
+    "random_seed": 42
+}

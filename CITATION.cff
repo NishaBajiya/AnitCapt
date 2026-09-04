@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: >-
+  Manuscript in preparation. Please update this file with the full
+  citation once published, and update the "Please cite" notice on the
+  web server (https://webs.iiitd.edu.in/raghava/anticapt/) to match.
+title: >-
+  AntiCAPt: A method for predicting, designing and scanning anticancer
+  aptamers
+authors:
+  - family-names: Raghava
+    given-names: G. P. S.
+    affiliation: >-
+      Department of Computational Biology, Indraprastha Institute of
+      Information Technology (IIIT-Delhi)
+    email: raghava@iiitd.ac.in
+repository-code: "https://github.com/raghavagps/anticapt"
+url: "https://webs.iiitd.edu.in/raghava/anticapt/"
+license: GPL-3.0
